@@ -4,7 +4,8 @@ import java.util.HashMap;
 
 public class IsIsomorphic {
     public static void main(String[] args) {
-        System.out.println(isIsomorphic("aab", "xxz") ? "True" : "False");
+//        System.out.println(isIsomorphic("aab", "xxz") ? "True" : "False");
+        System.out.println(isIsomorphic("aab", "xzx") ? "True" : "False");
     }
 
     private static boolean isIsomorphic(String s1, String s2) {

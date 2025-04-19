@@ -39,16 +39,6 @@ public class BinaryTree1 {
         }
         return root;
     }
-    public Node delete(Node root, int data) {
-        if (root == null) return root;
-        if (data < root.data) {
-           root = root.left ;
-        } else if (data > root.data) {
-           root =  root.right;
-        } else if (root.data == data) {
 
-        }
-        return root;
-    }
 
 }

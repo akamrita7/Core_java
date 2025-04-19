@@ -18,7 +18,7 @@ public class LevelOrderRec1 {
                 System.out.print( data + " ");
             }
         }
-        System.out.println();
+        System.out.println("Find max at each level");
         for (ArrayList<Integer> level : res){
             int max = 0;
             for (int data : level){
@@ -35,7 +35,7 @@ public class LevelOrderRec1 {
          return res;
     }
 
-    private static void levelOrderRec1(Node root, int level, ArrayList<ArrayList<Integer>> res) {
+    private static void levelOrderRec1(Node root, int level, ArrayList<ArrayList<Integer>> res) { //1 3 2 4 6 5
         if(root == null) return ;
         if(res.size()<=level)
             res.add(new ArrayList<>());

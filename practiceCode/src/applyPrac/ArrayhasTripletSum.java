@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class ArrayhasTripletSum {
     public static void main(String[] args) {
-        int[] arr = { 1, 4, 45, 6, 10, 8 };
+        int[] arr = { 1, 4, 45, 6, 10, 8 }; //13 = 1 4 8
         int target = 13;
         if (hasTripletSum(arr, target))
             System.out.println("true");

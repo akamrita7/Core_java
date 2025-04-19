@@ -2,8 +2,8 @@ package applyPrac;
 
 public class tech {
     public static void main(String[] args) {
-//        int[] input = {-7, 1, 5, 2, -4, 3, 0}; //3
-        int[] input = {1, 2, 3}; //-1
+        int[] input = {-7, 1, 5, 2, -4, 3, 0}; //3
+//        int[] input = {1, 2, 3}; //-1
         System.out.println(findEquilibrium(input));
 
     }

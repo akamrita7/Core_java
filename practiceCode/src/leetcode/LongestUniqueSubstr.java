@@ -22,7 +22,7 @@ public class LongestUniqueSubstr {
     }
 
     public static void main(String[] args) {
-        String s = "geeksforgeeks";
+        String s = "geeksforgeeks"; //eksforg 7
         System.out.println(longestUniqueSubstr(s));
     }
 }

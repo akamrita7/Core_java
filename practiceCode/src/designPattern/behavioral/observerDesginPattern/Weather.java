@@ -1,4 +1,4 @@
-package observerDesginPattern;
+package designPattern.behavioral.observerDesginPattern;
 
 public class Weather {
     public static void main(String[] args) {
@@ -8,5 +8,6 @@ public class Weather {
         station.addObserver(phone);
         station.addObserver(tv);
         station.setWeather("Too hot");
+        station.setWeather("Too cold");
     }
 }

@@ -1,6 +1,6 @@
-package observerDesginPattern;
+package designPattern.behavioral.observerDesginPattern;
 
-public class Phone implements Observers{
+public class Tv implements Observers{
     private String weather;
     @Override
     public void update(String weather) {
@@ -9,6 +9,6 @@ public class Phone implements Observers{
     }
 
     private void display() {
-        System.out.println("Phone Display weather update = " + weather);
+        System.out.println("Tv Display weather update = " + weather);
     }
 }
