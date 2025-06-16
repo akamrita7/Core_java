@@ -19,5 +19,7 @@ public class Implementation {
 
         user1.sendMessage("Hello brian", "2");
         user2.sendMessage("Hey buddy", "1");
+        user3.sendMessage("Hey buddy", "4");
+        user4.sendMessage("Hey buddy", "3");
     }
 }

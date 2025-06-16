@@ -11,6 +11,6 @@ public class Menu {
     }
 
     public void exceuteCommand(String instruction){
-        this.command.get(instruction).excute();
+        this.command.get(instruction).execute();
     }
 }

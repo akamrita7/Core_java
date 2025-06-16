@@ -8,7 +8,7 @@ public class CanPairsToSumK {
     public static void main(String[] args) {
             int[] arr = {92, 75, 65, 48, 45, 35 };
             int k = 10;
-            System.out.println(canPairs(arr, k) ? "True" : "False");
+            System.out.println(canPairs1(arr, k) ? "True" : "False");
     }
 
     private static boolean canPairs(int[] arr, int k) {
@@ -28,5 +28,32 @@ public class CanPairsToSumK {
         }
         System.out.println(count);
         return count==len/2;
+    }
+
+    public static boolean canPairs1(int[] arr, int k) {
+        if (arr.length % 2 != 0)
+            return false;
+        // Create a frequency array of size k
+        int[] freq = new int[k];
+        for (int x : arr) {
+            int rem = x % k;
+            // If the complement of the current
+            // remainder exists in freq, decrement
+            // its count
+            if (freq[(k - rem) % k] != 0)
+                freq[(k - rem) % k]--;
+                // Otherwise, increment the count of
+                // the current remainder
+            else
+                freq[rem]++;
+        }
+        // Check if all elements in the frequency
+        // array are 0
+        for (int count : freq) {
+            if (count != 0)
+                return false;
+        }
+
+        return true;
     }
 }

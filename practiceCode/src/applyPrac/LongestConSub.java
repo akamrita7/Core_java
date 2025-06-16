@@ -10,9 +10,9 @@ import java.util.stream.IntStream;
 public class LongestConSub {
     public static void main(String[] args) {
             int[] arr =  { 2, 6, 1, 9, 4, 5, 3 }; //{ 2, 6, 1, 9, 4, 5, 3 ,8 , 10};
-//            System.out.println(longestConsecutive(arr));
+            System.out.println(longestConsecutive(arr));
 //            System.out.println(longestConsecutive(new int[]{ 2, 6, 1, 9, 4, 5, 3 ,8 , 10}));
-            System.out.println(longestConsecutive(new int[]{ 36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42}));
+//            System.out.println(longestConsecutive(new int[]{ 36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42}));
     }
     static int longestConsecutive(int[] arr) {
         Arrays.sort(arr);

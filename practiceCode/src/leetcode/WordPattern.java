@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class WordPattern {
     public static void main(String[] args) {
 //        System.out.println(findPattern("aba","dog cat cat")); // f
-//        System.out.println(findPattern("abba","dog cat cat dog")); //t
+        System.out.println(findPattern("abba","dog cat cat dog")); //t
 //        System.out.println(findPattern("abba","dog cat cat fish")); // f
 //        System.out.println(findPattern("aaaa","dog cat cat dog")); //f
         System.out.println(findPattern("abba","dog dog dog dog")); //f

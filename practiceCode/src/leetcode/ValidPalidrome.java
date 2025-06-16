@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class ValidPalidrome {
     public static void main(String[] args) {
-//        String s = "A man, a plan, a canal: Panama";
+        String s = "A man, a plan, a canal: Panama";
 //        String s = "ab_a";
-        String s = "0P";
+//        String s = "0P";
         System.out.println(isPalindrome(s));
     }
     public static boolean isPalindrome(String s) {

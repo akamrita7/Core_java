@@ -2,7 +2,7 @@ package designPattern.behavioral.command;
 
 public class DeleteCommand implements Command{
     @Override
-    public void excute() {
+    public void execute() {
         System.out.println("delete Command execute");
     }
 }
