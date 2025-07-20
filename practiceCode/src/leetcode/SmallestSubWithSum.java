@@ -2,10 +2,10 @@ package leetcode;
 
 public class SmallestSubWithSum {
     public static void main(String[] args) {
-        int[] arr = {2,3,1,1,1,1,1};
-        int x = 5;
-//        int[] arr = {2,3,1,2,4,3};
-//        int x = 7;
+//        int[] arr = {2,3,1,1,1,1,1};
+//        int x = 5;
+        int[] arr = {2,3,1,2,4,3};
+        int x = 7;
         System.out.println(smallestSubWithSum(x, arr));
     }
     static int smallestSubWithSum(int x, int[] arr) {

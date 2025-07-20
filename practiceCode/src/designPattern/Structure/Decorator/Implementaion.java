@@ -5,6 +5,7 @@ public class Implementaion {
         Coffee coffee = new SimpleCoffee();
         System.out.println(coffee.getDescrition());
         System.out.println(coffee.getCost());
+        coffee = new SugarCoffeeDecorator(coffee);
         System.out.println(coffee.getDescrition());
         System.out.println(coffee.getCost());
         coffee = new MilkCoffee(coffee);

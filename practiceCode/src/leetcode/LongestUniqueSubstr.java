@@ -1,5 +1,11 @@
 package leetcode;
-
+//https://www.geeksforgeeks.org/dsa/length-of-the-longest-substring-without-repeating-characters/
+    /*Initialize two pointers left and right with 0, which define the current window being considered.
+    The right pointer moves from left to right, extending the current window.
+    If the character at right pointer is not visited, it's marked as visited.
+    If the character at right pointer is visited, it means there is a repeating character. The left pointer moves to the right while marking visited characters as false until the repeating character is no longer part of the current window.
+    The length of the current window (right - left + 1) is calculated and answer is updated accordingly.
+    */
 public class LongestUniqueSubstr {
     static final int MAX_CHAR = 26;
     static int longestUniqueSubstr(String s) {

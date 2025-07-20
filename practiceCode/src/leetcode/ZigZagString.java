@@ -1,5 +1,5 @@
 package leetcode;
-
+//https://leetcode.com/problems/zigzag-conversion/description/
 public class ZigZagString {
     // Function that Prints concatenation of
     // all rows of str's Zig-Zag fashion
@@ -8,7 +8,6 @@ public class ZigZagString {
         if (n == 1) {
             System.out.print(str + "\n");
         }
-        String res = "";
         String[] arr = new String[n];
         for (int i = 0; i < n; i++)
             arr[i] = "";
@@ -39,7 +38,7 @@ public class ZigZagString {
     public static void main(String[] args)
     {
         // Driver Code
-        String str = "PAYPALISHIRING";
+        String str = "PAYPALISHIRING"; //PAHNAPLSIIGYIR
         int N = 3;
         printZigZagConcat(str, N);
     }

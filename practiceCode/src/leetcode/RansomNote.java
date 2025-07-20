@@ -3,7 +3,7 @@ package leetcode;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+//https://leetcode.com/problems/ransom-note/description/
 public class RansomNote {
     public static void main(String[] args) {
         String ransomNote = "aa", magazine = "aaab";

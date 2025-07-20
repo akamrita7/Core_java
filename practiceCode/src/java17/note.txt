@@ -1,0 +1,1 @@
+boxed : In Java 8, "boxed" primarily refers to the boxed() method available on primitive streams like IntStream, LongStream, and DoubleStream. This method is used to convert a stream of primitive values into a Stream of their corresponding wrapper class objects.

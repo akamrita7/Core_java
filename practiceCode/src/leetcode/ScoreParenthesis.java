@@ -19,7 +19,7 @@ public class ScoreParenthesis {
                 stack.push(0);
             else {
                 int tmp = stack.pop();
-                int val = 0;
+                int val ;
                 if (tmp > 0)
                     val = tmp * 2;
                 else

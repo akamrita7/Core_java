@@ -1,9 +1,13 @@
+package designQuestion;
+
 import java.util.concurrent.*;
 
 public class RateLimiterManager {
     private static final int MAX_TOKENS = 5; // Max tokens per client
     private static final int REFILL_RATE = 2; // Tokens per second
     private static final int CLIENT_COUNT = 100; // Simulating 100 clients
+    // Map for storing rate limiters per client (IP/User ID)
+    private static final ConcurrentHashMap<String, TokenBucket> clientRateLimiters = new ConcurrentHashMap<>();
 
     private static class TokenBucket {
         private final long maxTokens;
@@ -41,8 +45,6 @@ public class RateLimiterManager {
         }
     }
 
-    // Map for storing rate limiters per client (IP/User ID)
-    private static final ConcurrentHashMap<String, TokenBucket> clientRateLimiters = new ConcurrentHashMap<>();
 
     // Get rate limiter for a specific client
     public static TokenBucket getRateLimiter(String clientId) {
@@ -53,7 +55,7 @@ public class RateLimiterManager {
         ExecutorService executor = Executors.newFixedThreadPool(10); // Thread pool to simulate concurrent clients
 
         for (int i = 0; i < CLIENT_COUNT; i++) {
-            final String clientId = "Client-" + (i % 10); // Simulating 10 unique clients making requests
+            final String clientId = "Client-" + (i); // Simulating 10 unique clients making requests
             executor.submit(() -> {
                 for (int j = 0; j < 10; j++) { // Each client sends 10 requests
                     boolean allowed = getRateLimiter(clientId).allowRequest();
