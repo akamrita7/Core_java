@@ -33,9 +33,7 @@ public class BinaryTree1 {
         } else if (data < root.data) {
             root.left = insert1(root.left, data);
         } else if (data > root.data) {
-            {
                 root.right = insert1(root.right, data);
-            }
         }
         return root;
     }

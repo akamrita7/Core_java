@@ -2,6 +2,7 @@ package designPattern.creational;
 
 public class Singleton implements Cloneable{
     //private static variable
+    //volatile read from memory and it will not catch for a thread
     private static volatile Singleton instance;
     //private constuctor
     private Singleton() {

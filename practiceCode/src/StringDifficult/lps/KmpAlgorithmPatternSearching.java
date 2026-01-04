@@ -1,11 +1,12 @@
-package StringDifficult;
-
+package StringDifficult.lps;
+//https://www.youtube.com/watch?v=ynv7bbcSLKE
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class KmpAlgorithmPatternSearching {
     public static void main(String[] args) {
         String txt = "aabaacaadaabaaba";
-        String pat = "aaba";
+        String pat ="aaba"; // "ababcabab";
         ArrayList<Integer> res = search(pat, txt);
         res.forEach(System.out::println);
     }
@@ -15,9 +16,11 @@ public class KmpAlgorithmPatternSearching {
         int m = pat.length();
         int[] lps = new int[m];
         ArrayList<Integer> res = new ArrayList<>();
-        constructLps(pat, lps);
+        Lps.constructLps(pat, lps);
         int i = 0;
         int j = 0;
+        Arrays.stream(lps).forEach(System.out::print);
+        System.out.println();
         while (i < n) {
             if(txt.charAt(i) == pat.charAt(j)){
                 i++;
@@ -34,26 +37,5 @@ public class KmpAlgorithmPatternSearching {
             }
         }
         return res;
-    }
-
-    private static void constructLps(String pat, int[] lps) {
-        int len = 0;
-        lps[0] = 0;
-        int i = 1;
-        while (i < pat.length()){  // "aaba";
-            if(pat.charAt(i) == pat.charAt(len)){
-                len++;
-                lps[i] = len;
-                i++;
-            }else{
-                if(len != 0){
-                    len = lps[len - 1];
-                }else{
-                    lps[i] = 0;
-                    i++;
-                }
-            }
-        }
-
     }
 }

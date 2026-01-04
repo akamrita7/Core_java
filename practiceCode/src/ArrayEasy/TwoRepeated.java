@@ -1,5 +1,6 @@
 package ArrayEasy;
 //https://www.geeksforgeeks.org/dsa/find-the-two-repeating-elements-in-a-given-array/
+//Find the two repeating elements in a given array
 public class TwoRepeated {
     public static void main(String[] args) {
         TwoRepeated repeat = new TwoRepeated();

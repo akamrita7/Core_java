@@ -2,7 +2,7 @@ package applyPrac;
 
 import java.util.Arrays;
 
-//https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/
+//https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/
 //We can divide the array into (92, 48), (75, 65) and (45, 35). The sum of all these pairs are multiples of 10.
 public class CanPairsToSumK {
     public static void main(String[] args) {
@@ -41,11 +41,11 @@ public class CanPairsToSumK {
             // remainder exists in freq, decrement
             // its count
             if (freq[(k - rem) % k] != 0)
-                freq[(k - rem) % k]--;
+                freq[(k - rem) % k]--; //10-8=2 48
                 // Otherwise, increment the count of
                 // the current remainder
             else
-                freq[rem]++;
+                freq[rem]++; //2 92
         }
         // Check if all elements in the frequency
         // array are 0

@@ -8,6 +8,7 @@ public class RotateBy1 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
 //        rotate(arr);
+//        Arrays.stream(arr).forEach(System.out::print);
         rotatebyK(arr,2);
         System.out.println(Arrays.toString(arr)); // [5, 1, 2, 3, 4]
     }

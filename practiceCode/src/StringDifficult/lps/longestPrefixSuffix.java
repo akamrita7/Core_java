@@ -1,4 +1,4 @@
-package MediumString;
+package StringDifficult.lps;
 //https://www.geeksforgeeks.org/longest-prefix-also-suffix/
 public class longestPrefixSuffix {
     static int longestPrefixSuffix(String s) {
