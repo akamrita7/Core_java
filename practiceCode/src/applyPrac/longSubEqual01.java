@@ -2,7 +2,7 @@ package applyPrac;
 
 import java.util.HashMap;
 
-public class longSubEqual01 {
+public class  longSubEqual01 {
     public static void main(String[] args) {
         int[] arr = /*{0, 0, 1, 1, 0};*/ {1, 0, 0, 1, 0, 1, 1};
 // subarray where count of 0 equal to 1

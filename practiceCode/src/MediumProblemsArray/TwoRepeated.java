@@ -6,8 +6,6 @@ public class TwoRepeated {
         int size = arr.length;
         int i;
         int x = -1, y = -1;
-
-
         for (i = 0; i < size; i++) {
             int abs_val = Math.abs(arr[i]);
             if (arr[abs_val] > 0)
@@ -23,7 +21,7 @@ public class TwoRepeated {
     public static void main(String[] args)
     {
         TwoRepeated repeat = new TwoRepeated();
-        int arr[] = { 4, 2, 4, 5, 2, 3, 1 };
+        int arr[] = { 5, 2, 4, 5, 2, 3, 1 };
         int ans[] = repeat.twoRepeated(arr);
         System.out.println(ans[0] + " " + ans[1]);
     }

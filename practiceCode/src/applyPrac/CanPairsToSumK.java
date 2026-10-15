@@ -2,13 +2,31 @@ package applyPrac;
 
 import java.util.Arrays;
 
-//https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/
+//https://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k
 //We can divide the array into (92, 48), (75, 65) and (45, 35). The sum of all these pairs are multiples of 10.
 public class CanPairsToSumK {
     public static void main(String[] args) {
             int[] arr = {92, 75, 65, 48, 45, 35 };
             int k = 10;
             System.out.println(canPairs1(arr, k) ? "True" : "False");
+    }
+
+    public static boolean canPairs1(int[] arr, int k) {
+        if (arr.length % 2 != 0)
+            return false;
+        int[] freq = new int[k];
+        for (int x : arr) { //{92, 75, 65, 48, 45, 35 };
+            int rem = x % k;
+            if (freq[(k - rem) % k] != 0)
+                freq[(k - rem) % k]--; //10-8=2 48
+            else
+                freq[rem]++; //2 92
+        }
+        for (int count : freq) {
+            if (count != 0)
+                return false;
+        }
+        return true;
     }
 
     private static boolean canPairs(int[] arr, int k) {
@@ -30,30 +48,5 @@ public class CanPairsToSumK {
         return count==len/2;
     }
 
-    public static boolean canPairs1(int[] arr, int k) {
-        if (arr.length % 2 != 0)
-            return false;
-        // Create a frequency array of size k
-        int[] freq = new int[k];
-        for (int x : arr) {
-            int rem = x % k;
-            // If the complement of the current
-            // remainder exists in freq, decrement
-            // its count
-            if (freq[(k - rem) % k] != 0)
-                freq[(k - rem) % k]--; //10-8=2 48
-                // Otherwise, increment the count of
-                // the current remainder
-            else
-                freq[rem]++; //2 92
-        }
-        // Check if all elements in the frequency
-        // array are 0
-        for (int count : freq) {
-            if (count != 0)
-                return false;
-        }
 
-        return true;
-    }
 }

@@ -13,12 +13,12 @@ public class LevelOrderRec1 {
         root.right.right.right = new Node(5);
         ArrayList<ArrayList<Integer>> res = levelOrder1(root);
 
-        for (ArrayList<Integer> level : res){
+     for (ArrayList<Integer> level : res){
             for (int data : level){
                 System.out.print( data + " ");
             }
         }
-        System.out.println("Find max at each level");
+           System.out.println("Find max at each level");
         for (ArrayList<Integer> level : res){
             int max = 0;
             for (int data : level){

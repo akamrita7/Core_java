@@ -10,7 +10,7 @@ public class RotateBy1 {
 //        rotate(arr);
 //        Arrays.stream(arr).forEach(System.out::print);
         rotatebyK(arr,2);
-        System.out.println(Arrays.toString(arr)); // [5, 1, 2, 3, 4]
+        System.out.println(Arrays.toString(arr)); // [4, 5, 1, 2, 3]
     }
 
     private static void rotate(int[] arr) {
@@ -24,11 +24,11 @@ public class RotateBy1 {
     }
     private static void rotatebyK(int[] arr,int k) {
         int len = arr.length;
-        k = k%len;
+        k = k%len; //2
         if(k==0) return;
         int last[] = new int[k];
         int j = 0;
-        for (int i = len-k; i < len ; i++) {
+        for (int i = len-k; i < len ; i++) { //{1, 2, 3, 4, 5}; [4, 5, 1, 2, 3]
             last[j++] = arr[i];
         }
         for (int i = len-1; i-k >=0 ; i--) {

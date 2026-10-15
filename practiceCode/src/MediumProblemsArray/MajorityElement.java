@@ -1,6 +1,8 @@
 package MediumProblemsArray;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 //https://www.geeksforgeeks.org/majority-element/
 public class MajorityElement {

@@ -4,9 +4,11 @@ package leetcode;
 public class MaxWater {
     public static void main(String[] args) {
 //        int[] arr = {2, 1, 8, 6, 4, 6, 5, 5};
-        int[] arr = {1,8,6,2,5,4,8,3,7};
-        System.out.println(maxWater(arr));
+//        int[] arr = {1,8,6,2,5,4,8,3,7};
+        int[] arr = {2, 1, 5, 3, 1, 0, 4};
+        System.out.println(maxWater(arr));//16
     }
+
     static int maxWater(int[] arr) {
         int left = 0, right = arr.length - 1;
         int res = 0;

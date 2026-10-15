@@ -2,7 +2,6 @@ package java17.util;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 //Write a stream to filter order with amount Great than 500 and filter product out of order and sort product by quantity asc. Order contains product amount and product conain instock quantity
 /*Filter orders where amount > 500

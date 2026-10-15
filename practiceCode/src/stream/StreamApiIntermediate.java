@@ -15,12 +15,15 @@ public class StreamApiIntermediate {
 //        groupByOddEven();
 //        converListToMap();
 //        removeNull();
-        findLongestString();
+//        findLongestString();
+        String test = null;
+        System.out.println(test.isEmpty());
     }
-
+    // longest length string
     private static void findLongestString() {
         List<String> fruits = List.of("apple", "banana", "cherry", "strawberry");
-        String s = fruits.stream().max(Comparator.comparingInt(String::length)).orElse("");
+        String s = fruits.stream().max(Comparator.comparingInt(String::length)).get();
+                //.orElse("");
         System.out.println(s);
         Optional<String> reduce = fruits.stream().reduce((s1, s2) -> s1.length() >= s2.length() ? s1 : s2);
         System.out.println(reduce);

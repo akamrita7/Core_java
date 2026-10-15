@@ -23,7 +23,7 @@ public class ZeroSumSubarray {
     public static void main(String arg[])
     {
 //        int arr[] = {-3, 2, 3, 1, 6};
-        int arr[] = {4, 2, -3, 1, 6};
+        int arr[] = {4, 2, -3, 1, 6};//set me sum 4 hai matlab 2+-3+1 = 0 hai
         if (subArrayExists(arr))
             System.out.println(
                     "Found a subarray with 0 sum");

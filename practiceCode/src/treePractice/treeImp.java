@@ -13,9 +13,12 @@ public class treeImp {
         tree.insert(11);
         tree.insert(9);
         tree.insert(4);
+        System.out.println("inorder");
         tree.inorder();
-        System.out.println();
+        System.out.println("\npreOrder");
         tree.preOrder();
+        System.out.println("\npostOrder");
+        tree.postOrder();
     }
 
 }

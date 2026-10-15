@@ -1,6 +1,6 @@
 package applyPrac;
 
-public class EquilibriumIndex {
+public class  EquilibriumIndex {
     public static void main(String[] args) {
         int[] arr = {-7, 1, 5, 2, -4, 3, 0}; //sum of left == sum of right
 //        int[] arr = {1, 2, 0, 3};

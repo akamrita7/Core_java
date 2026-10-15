@@ -18,9 +18,10 @@ public class BinaryTree1 {
     }
     public void preOrder1(Node root) {
         if(root != null) {
-            inorder1(root.left);
-            inorder1(root.right);
-            System.out.print(root.data);
+            System.out.print(root.data + " ");
+            preOrder1(root.left);
+            preOrder1(root.right);
+
 
         }
     }
@@ -39,4 +40,15 @@ public class BinaryTree1 {
     }
 
 
+    public void postOrder() {
+        postOrder1(root);
+    }
+    public void postOrder1(Node root) {
+        if(root != null) {
+            postOrder1(root.left);
+            postOrder1(root.right);
+            System.out.print(root.data+ " ");
+
+        }
+    }
 }

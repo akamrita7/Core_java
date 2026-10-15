@@ -1,5 +1,6 @@
 package leetcode;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,9 +9,10 @@ public class LengthOfLastWord {
         String s = "Geeks For Geeks";
         System.out.println(lengthOfLastWord1(s));
         s = "Start Coding Here";
-        System.out.println(lengthOfLastWord(s));
+        System.out.println(lengthOfLastWord1(s));
         s = "";
         System.out.println(lengthOfLastWord1(s));
+
     }
 
     private static int lengthOfLastWord1(String s) {

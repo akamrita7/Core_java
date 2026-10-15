@@ -30,6 +30,22 @@ public class DFS {
     private static void dfsconnected(List<List<Integer>> adj, int s) {
         boolean[] visited = new boolean[adj.size()];
         DFSRec(adj, visited, s);
+        visitAllPath(adj, visited, 0, 5 , "");
+    }
+
+    public static void visitAllPath(List<List<Integer>> adj, boolean[] visited, int s , int tar , String path) {
+        if(s == tar){
+            System.out.println(path);
+            return;
+        }
+        System.out.print(s + " ");
+        for (int j : adj.get(s)){
+            if(!visited[j]){
+                visited[s] = true;
+                DFSRec(adj, visited, j);
+                visited[s] = false;
+            }
+        }
     }
 
 }

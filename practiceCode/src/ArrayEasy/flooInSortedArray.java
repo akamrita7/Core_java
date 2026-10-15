@@ -1,10 +1,11 @@
 package ArrayEasy;
 
 public class flooInSortedArray {
+    //find number lower than k in a sorted array
     public static void main(String[] args)
     {
         int arr[] = { 1, 2, 4, 6, 10, 12, 14 };
-        System.out.println(findFloor(arr, -1)); //-1
+        System.out.println(findFloor(arr, 3)); //2
         System.out.println(findFloor(arr, 7)); //6
     }
 

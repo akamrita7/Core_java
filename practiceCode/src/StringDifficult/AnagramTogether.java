@@ -31,26 +31,47 @@ public class AnagramTogether {
         }
         return res;
     }
+
+    static void anagrams1(String[] arr) {
+        Map<String,List<String>> map = new HashMap<>();
+        List<String> words = Arrays.asList(arr);
+        for (String word : words){
+            char[] ch = word.toCharArray();
+            Arrays.sort(ch);
+            String key = new String(ch);
+            map.computeIfAbsent(key, k -> new ArrayList<>()).add(word);
+        }
+        map.entrySet().stream().forEach(x -> {
+            System.out.println(x.getValue());
+        });
+    }
     static void anagrams8(String[] arr) {
         List<String> list = Arrays.asList(arr);
         Collection<List<String>> res =  list.stream().collect(
                 Collectors.groupingBy(x ->
                        Arrays.stream(x.toLowerCase().split("")).
-                                sorted().collect(Collectors.toList()))).values();
-        System.out.println(res);
+                                sorted().toList())).values();
+        System.out.println("arr = " + res);
     }
 
     public static void main(String[] args) {
         String[] arr = {"act", "god", "cat", "dog", "tac"};
         System.out.println("Using java 21");
-        anagrams8(arr);
-        System.out.println("Using java 7");
+//        anagrams8(arr);
+        anagrams1(arr);
+        /*System.out.println("Using java 7");
+        Map<String,List<String>> anagrams1 = anagrams1(arr);
+        anagrams1.entrySet().forEach(x -> {
+            System.out.println(x.getValue());
+        });
         ArrayList<ArrayList<String>> res = anagrams(arr);
         for (List<String> group : res) {
             for (String word : group) {
                 System.out.print(word + " ");
             }
             System.out.println();
-        }
+        }*/
     }
+
+
 }

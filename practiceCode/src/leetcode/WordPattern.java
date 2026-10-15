@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class WordPattern {
+public class
+WordPattern {
     public static void main(String[] args) {
 //        System.out.println(findPattern("aba","dog cat cat")); // f
         System.out.println(findPattern("abba","dog cat cat dog")); //t

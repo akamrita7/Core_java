@@ -2,7 +2,7 @@ package applyPrac;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//https://www.geeksforgeeks.org/dsa/longest-sub-array-sum-k/
 public class LongestSubarray {
     public static void main(String[] args) {
         int[] arr = {10, 5, 2, 7, 1, -10} ; int k = 15; //6
@@ -20,7 +20,7 @@ public class LongestSubarray {
             if(sum == k) {
                 res = i+1;
             }else if(mp.containsKey(sum - k)) {
-                res = Math.max(res, i - mp.get(sum-k));
+                res = Math.max(res, i - mp.get(sum-k)); //{10, 5, 2, 7, 1, -10} 15
             }else{
                 mp.put(sum,i);
             }

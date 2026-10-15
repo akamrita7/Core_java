@@ -1,11 +1,28 @@
 package ArrayEasy;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 //https://www.geeksforgeeks.org/dsa/find-the-two-repeating-elements-in-a-given-array/
 //Find the two repeating elements in a given array
 public class TwoRepeated {
     public static void main(String[] args) {
         TwoRepeated repeat = new TwoRepeated();
         int arr[] = { 4, 2, 4, 5, 2, 3, 1 };
+        System.out.print("Java 8 : ");
+        Arrays.stream(arr).boxed()
+                .collect(Collectors.groupingBy(x -> x, LinkedHashMap :: new ,Collectors.counting()))
+                .entrySet().stream()
+//                .sorted(Map.Entry.comparingByValue())
+                .filter(x -> x.getValue() == 2)
+                .limit(2)
+                .forEach(x -> System.out.println(x.getKey()));
         int ans[] = repeat.twoRepeated(arr);
+        System.out.print("Java 7 : ");
         System.out.print(ans[0] + " " + ans[1]);
     }
 

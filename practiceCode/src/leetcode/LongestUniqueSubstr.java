@@ -9,7 +9,7 @@ package leetcode;
 public class LongestUniqueSubstr {
     static final int MAX_CHAR = 26;
     static int longestUniqueSubstr(String s) {
-        s = s.trim();
+        s = s.strip();
         if (s.length() == 0 || s.length() == 1)
             return s.length();
         int res = 0;
@@ -30,5 +30,6 @@ public class LongestUniqueSubstr {
     public static void main(String[] args) {
         String s = "geeksforgeeks"; //eksforg 7
         System.out.println(longestUniqueSubstr(s));
+        System.out.println(longestUniqueSubstr("abcbadbd  "));
     }
 }

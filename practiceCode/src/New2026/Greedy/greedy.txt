@@ -1,0 +1,4 @@
+greedy
+https://www.geeksforgeeks.org/dsa/greedy-algorithms/
+heaps
+https://www.geeksforgeeks.org/dsa/applications-of-heap-data-structure/

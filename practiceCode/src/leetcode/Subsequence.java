@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Subsequence {
     public static void main(String[] args) {
-        String s = "b";
-        String t = "abc";
+        String s = "ba";
+        String t = "abcba";
         System.out.println(isSubsequence(s,t));
     }
     public static boolean isSubsequence(String s, String t) {

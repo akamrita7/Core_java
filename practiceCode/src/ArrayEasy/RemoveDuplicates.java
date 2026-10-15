@@ -1,5 +1,6 @@
 package ArrayEasy;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class RemoveDuplicates {
@@ -14,8 +15,10 @@ public class RemoveDuplicates {
         for (int i = 0; i < newSize1; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println("java 8: ");
+        Arrays.stream(arr).boxed().distinct().forEach(System.out::print);
     }
-    private static int removeDuplicates(int[] arr) {
+    private static int removeDuplicates(int[] arr) { // sorted
         int len = arr.length;
         int ind = 1;
         for (int i = 1; i < len; i++) {

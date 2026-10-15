@@ -1,12 +1,19 @@
 package leetcode;
-
+/*Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+        Each letter in magazine can only be used once in ransomNote.
+        Example 1:
+        Input: ransomNote = "a", magazine = "b"
+        Output: false
+        Example 2:
+        Input: ransomNote = "aa", magazine = "ab"
+        Output: false*/
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 //https://leetcode.com/problems/ransom-note/description/
 public class RansomNote {
     public static void main(String[] args) {
-        String ransomNote = "aa", magazine = "aaab";
+        String ransomNote = "aabb", magazine = "aaabb";
         System.out.println(canConstruct(ransomNote,magazine));
     }
     public static boolean canConstruct(String ransomNote, String magazine) {

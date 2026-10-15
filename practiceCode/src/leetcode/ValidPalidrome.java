@@ -16,17 +16,16 @@ public class ValidPalidrome {
         s = s.toLowerCase().replaceAll("[^a-z\\d]", "");
         int start = 0;
         int end = s.length()-1;
-        Boolean flag = true;
         if(end<=0) {
             return false;
         }
         while (start<end){
           if(s.charAt(start) != s.charAt(end)) {
-              flag = false;
+              return false;
           }
           start++;
           end--;
         }
-        return flag;
+        return true;
     }
 }

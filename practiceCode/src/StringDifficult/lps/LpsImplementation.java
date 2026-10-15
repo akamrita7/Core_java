@@ -2,10 +2,10 @@ package StringDifficult.lps;
 
 public class LpsImplementation {
     public static void main(String[] args) {
-//       System.out.println(longestPalindromicPrefix("abaac")); //aba
+       System.out.println(longestPalindromicPrefix("abaac")); //aba
 //       System.out.println(repeatedSubstringPattern("abcabcabc")); //Input: str = "abcabcabc" Output: true // Input: str = "abcdabc" Output: false
 //         System.out.println(removeOccurrences("geeksforgeeks", "e")); //Input : s = "geeksforgeeks" c = 'e' Output : s = "gksforgks"
-        System.out.println(shortestPalindrome("aacecaaaa")); //Input: s = "abc" Output: 2 // Input: s = "aacecaaaa Output: aaaacecaaaacecaaaa
+//        System.out.println(shortestPalindrome("aacecaaaa")); //Input: s = "abc" Output: 2 // Input: s = "aacecaaaa Output: aaaacecaaaacecaaaa
     }
 //    https://www.geeksforgeeks.org/dsa/print-the-longest-palindromic-prefix-of-a-given-string/
     public static String longestPalindromicPrefix(String s) {

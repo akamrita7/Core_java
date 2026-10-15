@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DFSDisconnected {
@@ -21,6 +22,7 @@ public class DFSDisconnected {
         }
         System.out.println("Complete DFS of the graph:");
         dfsDisconnected(adj, V);
+
     }
 
     private static void dfsDisconnected(List<List<Integer>> adj, int V) {
@@ -31,6 +33,7 @@ public class DFSDisconnected {
             }
             
         }
+
     }
 
     public static void DFSRec(List<List<Integer>> adj, boolean[] visited, int s) {
@@ -42,6 +45,8 @@ public class DFSDisconnected {
             }
         }
     }
+
+
 
 
 }

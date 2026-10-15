@@ -18,7 +18,7 @@ public class ReverseWords {
         StringBuilder sb = new StringBuilder();
         while(len >= 0){
             String  c = str[len];
-            sb.append(c);
+            sb.append(c).append(" ");
             if(c.length()-1>0){
                 sb.append(" ");
             }

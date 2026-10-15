@@ -2,7 +2,8 @@ package StringDifficult.lps;
 
 public class MinChar2Add2MakePalidrome {
     public static void main(String[] args) {
-        System.out.println(minCharsToAddToMakePalindrome("abc"));
+//        System.out.println(minCharsToAddToMakePalindrome("abc"));
+        System.out.println(minCharsToAddToMakePalindrome("aacecaaaa"));
     }
     public static int minCharsToAddToMakePalindrome(String s) {
         String rev = new StringBuilder(s).reverse().toString();

@@ -53,7 +53,6 @@ public class RateLimiterManager {
 
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(10); // Thread pool to simulate concurrent clients
-
         for (int i = 0; i < CLIENT_COUNT; i++) {
             final String clientId = "Client-" + (i); // Simulating 10 unique clients making requests
             executor.submit(() -> {

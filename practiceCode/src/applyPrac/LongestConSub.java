@@ -1,16 +1,15 @@
 package applyPrac;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
-
+/*Input: arr[] = [2, 6, 1, 9, 4, 5, 3]
+Output: 6
+Explanation:  The longest consecutive subsequence [2, 6, 1, 4, 5, 3] = 1,2,3,4,5,6*/
 //https://www.geeksforgeeks.org/longest-consecutive-subsequence/
 public class LongestConSub {
     public static void main(String[] args) {
             int[] arr =  { 2, 6, 1, 9, 4, 5, 3 }; //{ 2, 6, 1, 9, 4, 5, 3 ,8 , 10};
-            System.out.println(longestConsecutive(arr));
+            System.out.println(longestConsecutive2(arr));
 //            System.out.println(longestConsecutive(new int[]{ 2, 6, 1, 9, 4, 5, 3 ,8 , 10}));
 //            System.out.println(longestConsecutive(new int[]{ 36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42}));
     }
@@ -26,6 +25,24 @@ public class LongestConSub {
                 cnt = 1;
             }
             res = Math.max(res, cnt);
+        }
+        return res;
+    }
+
+    static int longestConsecutive2(int[] arr) {
+        Set<Integer> st = new HashSet<>();
+        int res =0 ;
+        for (int val : arr)
+            st.add(val);
+        for (int val : arr){
+            if(st.contains(val) && !st.contains(val-1)){
+                int cur = val , cnt = 0;
+                while(st.contains(cur)){
+                    cur++;
+                    cnt++;
+                }
+                res = Math.max(res,cnt);
+            }
         }
         return res;
     }
